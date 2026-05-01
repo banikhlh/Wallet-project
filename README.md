@@ -25,7 +25,7 @@ Track your income and expenses, view category statistics, get interactive charts
 - **Dark theme** – toggle in settings and persists across sessions
 - **Date tracking** for each transaction (defaults to current date)
 - **Period filtering** for statistics (week, month, year, all time)
-- **Global (system) categories – no user‑created category chaos
+- **Global (system) categories** – no user‑created category chaos
 
 ---
 
