@@ -1,5 +1,12 @@
 # Wallet Project
 
+# Contacts/Контакты
+- **Bug reports & feature requests**/**Баги и предложения**: [GitHub Issues](https://github.com/banikhlh/wallet-project/issues)
+- **Email**/**Почта** (for private inquiries): `banikhlh@gmail.com` (Eng or Rus)
+- **Telegram**: [@mbrysin](https://t.me/mbrysin)
+
+For quick questions you can also open a Discussion: [GitHub Discussions](https://github.com/banikhlh/wallet-project/discussions)
+
 [🇬🇧 English](#english) | [🇷🇺 Русский](#russian)
 
 # ENG
