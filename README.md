@@ -1,5 +1,82 @@
-# 💰 Wallet Project
+# Wallet Project
 
+[🇬🇧 English](#english) | [🇷🇺 Русский](#russian)
+
+# ENG
+<a name="english"></a>
+Personal Finance Tracker with analytics, fun facts, and anonymous comparisons.
+Track your income and expenses, view category statistics, get interactive charts, and see what your money could buy 🙂
+
+---
+
+✨ Features
+
+- **Authentication and registration** (JWT tokens, login attempt limiting)
+- **Add income and expenses** with category, date, and description selection
+- **Dashboard with balance cards**, category pie chart, and dynamic line chart
+- **Fun facts** – compare your turnover with gold prices, iPhones, coffee, and even Elon Musk's wealth
+- **Dark theme** – toggle in settings and persists across sessions
+- **Date tracking** for each transaction (defaults to current date)
+- **Period filtering** for statistics (week, month, year, all time)
+- **Global (system) categories – no user‑created category chaos
+
+---
+
+## 🛠️ Tech Stack
+| Component       |	Technologies                    |
+|-----------------|---------------------------------|
+| Backend         | Python 3.10+, FastAPI, Uvicorn  |
+| Database        | SQLite, aiosqlite               |
+| Authentication	| JWT (python-jose), bcrypt       |
+| Templates	      | Jinja2 (via FastAPI)            |
+| Frontend        | Vanilla JS, Chart.js            |
+| Styling         |	CSS (responsive, dark theme)    |
+
+---
+
+## 📦 Installation and Setup
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/banikhlh/wallet-project.git
+cd wallet-project
+```
+
+2. **Create and activate a virtual environment**
+```bash
+python -m venv .venv
+source .venv/bin/activate      # Linux / macOS
+.venv\Scripts\activate         # Windows
+```
+
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Set up environment variables**
+Create a .env file in the project root, using the .env.example template.
+```bash
+cp .env.example .env
+```
+Edit .env and provide your own values (especially for SECRET_KEY).
+
+5. **Run tests**
+```bash
+python tests/ -v
+```
+
+6. **Start the server**
+```bash
+python main.py
+```
+or
+```bash
+uvicorn main:app --reload --host 127.0.0.1 --port 8000
+```
+
+# RU
+<a name="russian"></a>
 Персональный финансовый трекер с аналитикой, забавными фактами и анонимными сравнениями.  
 Учитывайте доходы и расходы, смотрите статистику по категориям, получайте интерактивные графики и узнавайте, на что хватило бы ваших денег
 
