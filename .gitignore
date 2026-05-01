@@ -216,6 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+<<<<<<< HEAD
 
 # Databases
 *.db
+=======
+>>>>>>> 46894c69f9187d0beb6286234e9731007fc84111
