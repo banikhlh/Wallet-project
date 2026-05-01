@@ -70,7 +70,7 @@ Edit .env and provide your own values (especially for SECRET_KEY).
 
 5. **Run tests**
 ```bash
-python tests/ -v
+pytest tests/ -v
 ```
 
 6. **Start the server**
@@ -144,7 +144,7 @@ cp .env.example .env
 
 5. **Запустите тесты**
 ```bash
-python tests/ -v
+pytest tests/ -v
 ```
 
 6. **Запустите сервер**
