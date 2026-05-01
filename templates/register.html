@@ -1,0 +1,64 @@
+<!-- templates/register.html -->
+{% extends "base.html" %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <div class="frame">
+        <div class="frame-inner">
+            <h1>Регистрация</h1>
+            
+            {% if messages %}
+                {% for category, message in messages.items() %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            
+            {% if errors %}
+                <div class="alert alert-danger">
+                    <ul>
+                    {% for field, error in errors.items() %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            
+            <form method="POST" action="{{ url_for('handle_registration') }}">
+                <div class="form-group">
+                    <input type="text" 
+                           id="username" 
+                           name="username" 
+                           placeholder="Имя пользователя"
+                           value="{{ form_data.get('username', '') }}"
+                           class="{% if errors.username %}is-invalid{% endif %}"
+                           required>
+                </div> 
+                <div class="form-group">
+                    <input type="password" 
+                           id="password" 
+                           name="password"
+                           placeholder="Пароль"
+                           class="{% if errors.password %}is-invalid{% endif %}"
+                           required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" 
+                           id="confirm_password" 
+                           name="confirm_password"
+                           placeholder="Подтвердите пароль"
+                           class="{% if errors.confirm_password %}is-invalid{% endif %}"
+                           required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    <a href="{{ url_for('show_login_form') }}" class="btn btn-link">Уже есть аккаунт? Войти</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

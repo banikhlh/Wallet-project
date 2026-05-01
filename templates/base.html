@@ -1,0 +1,51 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Wallet Project{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+    <script>
+    (function() {
+        const match = document.cookie.match(/(?:^|;\s*)theme=([^;]*)/);
+        const theme = match ? match[1] : 'light';
+        if (theme === 'dark') {
+        document.documentElement.classList.add('dark-theme');
+        }
+    })();
+    </script>
+</head>
+<body>
+    <header class="top-bar">
+        <a href="{{ url_for('home') }}" class="logo-link">Главная</a>
+        <nav>
+            <ul class="nav-menu">
+                {% if current_user %}
+                    <li><a href="/settings">Настройки</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('show_login_form') }}">Вход</a></li>
+                    <li><a href="{{ url_for('show_registration_form') }}">Регистрация</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        <div class="frame">
+            <div class="frame-inner">
+                {% block main_content %}
+                {% endblock %}
+            </div>
+        </div>
+        {% endblock %}
+    </main>
+    
+    <script src="{{ url_for('static', path='js/script.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
